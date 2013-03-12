@@ -10,8 +10,8 @@ $logFile = dirname(__FILE__).'/log/log_'.$startTime.'_build.log';
 $logHandle = fopen($logFile, 'a+');
 
 # Clear out any of the old files except for the base_box file
-//$log = shell_exec('find vagrant/modules -type d -not -name "base_box" -maxdepth 1 | grep modules/ | xargs rm -rf');
-//fwrite($logHandle, $log."\n");
+$log = shell_exec('find vagrant/modules -type d -not -name "base_box" -maxdepth 1 | grep modules/ | xargs rm -rf');
+fwrite($logHandle, $log."\n");
 
 # Build the box
 $log = shell_exec(
