@@ -1,0 +1,10 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+
+    # Every Vagrant virtual environment requires a box to build off of.
+    config.vm.box = "vagrant-CentOS63"
+
+    config.vm.forward_port 22, 2222
+end
